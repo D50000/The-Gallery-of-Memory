@@ -1,0 +1,33 @@
+/* title! */
+.title {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  
+  .title img {
+    width: 100%;
+  }
+  
+  .title h2 {
+    /* h2 span all the columns */
+    grid-column: 1 / -1;
+    display: grid;
+    /* That h2, h2:before, h2:after become grid */
+    grid-template-columns: 1fr auto 1fr;
+    grid-gap: 20px;
+    align-items: center;
+  }
+  
+  .title h2:after {
+    --direction: right;
+  }
+  
+  .title h2:before, .title h2:after {
+    display: block;
+    content: '';
+    /* set it emty comtent '' but has background */
+    height: 10px;
+    background: linear-gradient(to var(--direction, left), #ffc600, transparent);
+  }
+  
