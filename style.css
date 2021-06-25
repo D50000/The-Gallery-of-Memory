@@ -1,5 +1,7 @@
 /* title! */
 .title {
+  font-family: 'Lobster', cursive;
+  font-size: 20px;
   display: grid;
   grid-gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -17,6 +19,7 @@
   grid-template-columns: 1fr auto 1fr;
   grid-gap: 20px;
   align-items: center;
+  color: mediumpurple;
 }
 
 .title h1:after {
@@ -36,10 +39,11 @@
   box-sizing: border-box;
 }
 
+/* body content */
 body {
   padding: 50px;
   font-family: sans-serif;
-  background: linear-gradient(to right, #f93d66, #6d47d9);
+  background-image: url("./assets/images/topography.svg"), linear-gradient(95deg, #ffd4ae, #94def4);
 }
 
 h1,
@@ -58,7 +62,18 @@ p {
 .close {
   background: none;
   color: black;
-  border: 0;
+  float: right;
+  font-size: 15px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 6px;
+  border-color: #918a8a;
+}
+
+.close:hover {
+  background-color: #ccccce;
+  color: #fdfdfd;
+  cursor: pointer;
 }
 
 .gallery {
@@ -104,6 +119,12 @@ p {
   text-transform: uppercase;
   background: rgba(0, 0, 0, 0.7);
   padding: 5px;
+}
+
+.item__overlay button:hover {
+  border: 2px solid rgb(101, 241, 241);
+  color: rgb(101, 241, 241);
+  cursor: pointer;
 }
 
 /* .item hover => .item_overlay change the style */
@@ -155,7 +176,7 @@ p {
 .overlay-inner {
   background: white;
   width: 700px;
-  padding: 20px;
+  padding: 5px;
 }
 
 .overlay img {
