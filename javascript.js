@@ -31,8 +31,8 @@ function close() {
   overlay.classList.remove('open');
 }
 
-// random generate 50 items, and concat some [1, 1] array to it
-const digits = Array.from({ length: 50 }, () => [randomNumber(4), randomNumber(4)]).concat([[1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1]])
+// random generate 79 items, and concat some [1, 1] array to it
+const digits = Array.from({ length: 79 }, () => [randomNumber(4), randomNumber(4)]).concat([[1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1]])
 
 // insert the template into the html
 const html = digits.map(generateHTML).join('');
